@@ -106,8 +106,17 @@ class PengembalianController extends Controller
      * @param  \App\Models\Pengembalian  $pengembalian
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pengembalian $pengembalian)
+    public function destroy($id)
     {
         //
+        $kembali = Pengembalian::findOrFail($id);
+        $kembali->delete();
+        Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Data deleted successfully",
+        ]);
+        return redirect()->route('kembali.index');
+
+    
     }
 }

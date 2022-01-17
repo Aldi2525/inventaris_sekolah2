@@ -67,7 +67,8 @@
                         <div class="form-group">
                             <label for="">Status</label>
                                 <select name="status" class="form-control">
-                                    <option value="dikembalikan">Dikembalikan</option>
+                                <option value="-">-</option>
+                                    <option value="Dikembalikan">Pengembalian</option>
                                 </select>
     
                            </div>
