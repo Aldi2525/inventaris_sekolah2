@@ -28,7 +28,7 @@
                             <th>Nama Peminjam</th>                       
                             <th>Jumlah Pinjam</th>
                             <th>Tanggal Pinjam</th>
-
+                            <th>Status</th>
                             <th>Aksi</th>
                             </tr>
                             </thead>
@@ -41,7 +41,7 @@
                              <td>{{ $data->nama_peminjam}}</td>
                              <td>{{ $data->jumlah_pinjam }}</td>
                              <td>{{ $data->tgl_pinjam }}</td>
-                             
+                             <td>{{ $data->status }}</td>
 
                                  <td>
                                     <form action="{{route('pinjam.destroy',$data->id)}}" method="post">

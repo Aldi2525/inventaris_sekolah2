@@ -126,9 +126,9 @@ return [
     'classes_brand_text' => 'text-dark',
     'classes_content_wrapper' => 'sidebar-light-warning elevation-10 ',
     'classes_content_header' => '',
-    'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-info',
+    'classes_content' => 'sidebar-dark',
     'classes_sidebar_nav' => '',
+    'classes_sidebar' => 'sidebar-dark-info',
     'classes_topnav' => 'navbar-dark navbar-info',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
@@ -145,12 +145,12 @@ return [
     |
     */
 
-    'sidebar_mini' => 'l',
+    'sidebar_mini' => 'lg',
     'sidebar_collapse' => false,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
-    'sidebar_scrollbar_theme' => 'os-theme-light',
+    'sidebar_scrollbar_theme' => 'os-theme-dark',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 300,

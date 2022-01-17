@@ -38,18 +38,18 @@
                                     <tbody>
                                         <tr>
                                             <td>{{ $no++ }}</td>
-                                            <td>{{ $data->peminjam->nama_peminjam }}</td>
+                                            <td>{{ $data->pinjam->nama_peminjam }}</td>
                                             <td>{{ $data->barang->nama_barang }}</td>
                                             <td>{{ $data->jumlah_kembali }}</td>
                                             <td>{{ $data->tgl_kembali }}</td>
                                             <td>{{ $data->status }}</td>
 
                                             <td>
-                                                <form action="{{ route('pengembalian.destroy', $data->id) }}"
+                                                <form action="{{ route('kembali.destroy', $data->id) }}"
                                                     method="post">
                                                     @method('delete')
                                                     @csrf
-                                                    <!-- <a href="{{ route('pengembalian.edit', $data->id) }}" class="btn btn-outline-info">Edit</a> -->
+                                                    
                                                     <button type="submit" class="btn btn-outline-danger"
                                                         onclick="return confirm('Apakah anda yakin menghapusnya')">HAPUS</button>
                                                 </form>

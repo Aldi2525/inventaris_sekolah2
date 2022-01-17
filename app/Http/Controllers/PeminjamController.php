@@ -47,7 +47,7 @@ class PeminjamController extends Controller
         $peminjam->nama_peminjam = $request->nama_peminjam;
         $peminjam->jumlah_pinjam = $request->jumlah_pinjam;
         $peminjam->tgl_pinjam = $request->tgl_pinjam;
-        $kembali->status = $request->status;
+        $peminjam->status = $request->status;
 
         
         $peminjam->save();

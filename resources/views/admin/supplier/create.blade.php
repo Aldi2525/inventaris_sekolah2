@@ -13,7 +13,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card ">
                 <div class="card-header">Input Supplier</div>
                 <div class="card-body">
                     <form action="{{route('supplier.store')}}" method="post">

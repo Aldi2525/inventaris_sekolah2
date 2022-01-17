@@ -22,7 +22,7 @@ class Pengembalian extends Model
         return $this->belongsTo('App\Models\Barang','id_barang');
     }
 
-    public function peminjam()
+    public function pinjam()
     {
         // Data model "Model" bisa memiliki oleh model "Author"
         //melalui fk "author_id"

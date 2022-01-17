@@ -19,12 +19,12 @@
                         @csrf
                         <div class="form-group">
                             <label for="">Nama peminjam</label>
-                            <select name="id_barang" class="form-control @error('id_supplier') is-invalid @enderror" >
+                            <select name="id_peminjam" class="form-control @error('id_supplier') is-invalid @enderror" >
                                 @foreach($pinjam as $data)
                                     <option value="{{$data->id}}">{{$data->nama_peminjam}}</option>
                                 @endforeach
                             </select>
-                            @error('id_supplier')
+                            @error('id_peminjam')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -62,11 +62,11 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>
+                   
 
                         <div class="form-group">
                             <label for="">Status</label>
-                                <select name="starus" class="form-control">
+                                <select name="status" class="form-control">
                                     <option value="dikembalikan">Dikembalikan</option>
                                 </select>
     

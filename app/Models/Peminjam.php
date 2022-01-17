@@ -20,4 +20,11 @@ class Peminjam extends Model
         //melalui fk "author_id"
         return $this->belongsTo('App\Models\Barang','id_barang');
     }
+
+    public function pengembalian()
+    {
+        // data model "Author" bisa memiliki banyak data
+        //dari model "Book" melalui fk "author_id"
+        $this->hasMany('App\Models\Pengembalian','id_peminjam');
+    }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pengembalian;
+use App\Models\Peminjam;
 use App\Models\Barang;
 use Session;
 use Illuminate\Http\Request;
@@ -28,9 +29,10 @@ class PengembalianController extends Controller
      */
     public function create()
     {
-        //
-        // $barang = Barang::all();
-        // return view('admin.kembali.create', compact('barang'));
+        
+        $barang = Barang::all();
+        $pinjam = Peminjam::all();
+        return view('admin.kembali.create', compact('barang' , 'pinjam'));
     }
 
     /**
@@ -57,9 +59,11 @@ class PengembalianController extends Controller
 
         $barang = Barang::findOrFail($request->id_barang);
         $barang->jumlah_stok += $request->jumlah_kembali;
+        $peminjam = Peminjam::findOrFail ($request->id_peminjam);
+        $peminjam->jumlah_pinjam -= $request->jumlah_kembali;
         $barang->save();
 
-        return redirect()->route('bmasuk.index');
+        return redirect()->route('kembali.index');
     }
 
     /**
