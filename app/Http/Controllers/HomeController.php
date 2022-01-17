@@ -29,6 +29,7 @@ class HomeController extends Controller
         $barangmasuk = DB::table('barangmasuks')->count();
         $barangkeluar = DB::table('barangkeluars')->count();
         $pinjaman = DB::table('peminjams')->count();
-        return view('home', compact('supplier','barang','barangmasuk','barangkeluar','pinjaman'));
+        $pengembalian = DB::table('pengembalians')->get()->count();
+        return view('home', compact('supplier','barang','barangmasuk','barangkeluar','pinjaman', 'pengembalian'));
     }
 }
