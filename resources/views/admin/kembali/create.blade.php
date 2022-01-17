@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title','Tambah Peminjam')
+@section('title','Tambah pengembalian')
 
 @section('content_header')
 
