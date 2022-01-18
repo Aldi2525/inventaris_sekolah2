@@ -59,9 +59,10 @@ class PengembalianController extends Controller
 
         $barang = Barang::findOrFail($request->id_barang);
         $barang->jumlah_stok += $request->jumlah_kembali;
-        $peminjam = Peminjam::findOrFail ($request->id_peminjam);
-        $peminjam->jumlah_pinjam -= $request->jumlah_kembali;
+        $pinjam = Peminjam::findOrFail ($request->id_peminjam);
+        $pinjam->jumlah_pinjam -= $request->jumlah_kembali;
         $barang->save();
+        $pinjam->save();
 
         return redirect()->route('kembali.index');
     }
