@@ -155,7 +155,7 @@
                         </div>
                     </div>
                     <div class="col-auto">
-                        <i class="fa fa-shopping-cart fa-2x text-gray-300"></i>
+                        <i class="fas fa-user-plus fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>
@@ -185,7 +185,7 @@
                         </div>
                     </div>
                     <div class="col-auto">
-                        <i class="fa fa-shopping-cart fa-2x text-gray-300"></i>
+                        <i class="fas fa-address-book fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>
